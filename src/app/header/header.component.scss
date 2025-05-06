@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    .headerLogo {
+        background-color: white;
+        padding: 7px 16px;
+        border-radius: 18px;
+        width: 80px;
+    }
+    .headerMenu {
+        background-color: white;
+        padding: 7px 28px;
+        border-radius: 18px;
+        font-family: "Pompiere", sans-serif;
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 21px;
+        }
+    }
+}
