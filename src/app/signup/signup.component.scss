@@ -1,0 +1,72 @@
+.signup {
+    display: flex;
+    justify-content: space-between;
+    .signupForm {
+        background-color: white;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        .signupTitle {
+            text-align: center;
+            margin: 12% 0 8% 0;
+        }
+        .signupInputs {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 0 10%;
+            input {
+                background-color: #FFE7D8;
+                font-family: "Montserrat", sans-serif;
+                border: none;
+                padding: 16px 0 16px 17px;
+                font-size: 17px;
+                color: black;
+                border-radius: 15px;
+            }
+        }
+        .signupColorsChoice {
+            display: flex;
+            flex-direction: row;
+            gap: 5%;
+            justify-content: center;
+            margin-top: 5%;
+            .color {
+                color: transparent;
+                width: 50px;
+                height: 50px;
+                border-radius: 25px;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                &:focus {
+                    border: black 1px solid;
+                }
+            }
+            .color.selected {
+                text-align: center;
+                color: white;
+                width: 50px;
+                transform: scale(1.1);
+            }
+        }
+        button {
+            margin: 8% 10% 2% 10%;
+            background-color: #FFA28D;
+            border: none;
+            padding: 13px 0;
+            border-radius: 15px;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0px 2px 9px rgba(255, 162, 141, 0.6);
+        }
+    }
+    img {
+        width: 42%;
+        height: fit-content;
+    }
+}
