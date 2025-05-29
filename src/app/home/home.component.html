@@ -1,1 +1,33 @@
+<p class="hiDashboard">Bonjour, Claire !</p>  <!-- Rendre ça dynamique  -->
 
+<div class="dashboard">
+    <div class="encouragement">
+        <img src="assets/fleur1.png" alt="fleur de décoration" class="fleur1"/>
+        <img src="assets/fleur2.png" alt="fleur de décoration" class="fleur2"/>
+        Petite phrase d'encouragement  <!-- Rendre ça dynamique  -->
+    </div>
+    <div class="challenges">
+        Mes challenges
+        <div class="oneChallenge">
+            <div class="oneChallengeDescription">
+                <p class="oneChallengeName">Nom du challenge</p>
+                <p class="oneChallengeTime">5 jours restants</p>
+            </div>
+            <div class="oneChallengeProgress">
+                <app-progress-bar
+                [title]="'Challenge Yoga'"
+                [current]="5"
+                [max]="15"
+                [daysRemaining]="10">
+                </app-progress-bar> <!-- Rendre dynamique  -->
+            </div>
+        </div>
+    </div>
+    <div class="tasks">Contenu central</div>
+    <div class="posts">
+        <img src="assets/fleur3.png" alt="fleur de décoration" class="fleur3"/>
+        Manque de dopamine ? Par ici !
+    </div>
+    <div class="stats">Stats de la semaine</div>
+  </div>
+  

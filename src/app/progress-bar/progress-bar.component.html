@@ -1,0 +1,12 @@
+<div class="challenge-progress">
+    <div class="progress-bar">
+        <div
+            class="progress-fill"
+            [style.width.%]="(current / max) * 100">
+        </div>
+        <div class="progress-ticks">
+            <span *ngFor="let tick of ticks">{{ tick }}</span>
+        </div>
+    </div>
+</div>
+  
