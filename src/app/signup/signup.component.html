@@ -2,16 +2,18 @@
     <form class="signupForm">
         <h1 class="signupTitle">Bienvenue !</h1>
         <div class="signupInputs">
-            <input type="text" placeholder="Nom" class="signupLastName" [(ngModel)]="lastName" name="lastName" required autocomplete="off">
-            <input type="text" placeholder="Prénom" class="signupFirstName" [(ngModel)]="firstName" name="firstName" required autocomplete="off">
-            <input type="email" placeholder="Email" class="signupEmail" [(ngModel)]="email" name="email" required autocomplete="off">
-            <input type="password" placeholder="Mot de passe" class="signupPassword" [(ngModel)]="password" name="password" required autocomplete="new-password">
+            <input type="text" placeholder="Nom" class="signupLastName" [(ngModel)]="form.lastName" name="lastName" required autocomplete="off">
+            <input type="text" placeholder="Prénom" class="signupFirstName" [(ngModel)]="form.firstName" name="firstName" required autocomplete="off">
+            <input type="email" placeholder="Email" class="signupEmail" [(ngModel)]="form.email" name="email" required autocomplete="off">
+            <input type="password" placeholder="Mot de passe" class="signupPassword" [(ngModel)]="form.password" name="password" required autocomplete="new-password">
         </div>
         <div class="signupColorsChoice">
-            <div class="color"  *ngFor="let color of colors" [style.backgroundColor]="color.button" [class.selected]="selectedColor === color.button"
-            (click)="selectedColor = color.button">
-                <p *ngIf="selectedColor !== color.button">    .</p>
-                <p *ngIf="selectedColor === color.button"><img src="assets/check3.png" /></p>
+            <div class="color"  *ngFor="let color of colors" [style.backgroundColor]="color.button" [class.selected]="form.color_code === color.button"
+            (click)="onColorClick(color.button)">
+                <p *ngIf="form.color_code !== color.button">    .</p>
+                <p *ngIf="form.color_code === color.button" class="checkmark">
+                    <img src="assets/check3.png" />
+                </p>
             </div>
         </div>
         <button class="signupButton" (click)="signup()">Inscription</button>
@@ -20,5 +22,5 @@
             <p class="signupRedirectLink">Connexion</p>
         </div>
     </form>
-    <img src="assets/logoTidyMinds.png" alt="Logo de tidyMinds, c'est un nuage avec le nom du site"/>
+    <img src="assets/logoTidyMinds.png" alt="Logo de tidyMinds, c'est un nuage avec le nom du site" class="logo"/>
 </div>

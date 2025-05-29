@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ColorService } from '../services/color.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,21 +14,26 @@ import { FormsModule } from '@angular/forms';
 export class SignupComponent implements OnInit{
 
   colors: any[] = []
+  
+  form = {
+    lastName: '',
+    firstName: '',
+    email: '',
+    password: '',
+    role_id: 3,
+    color_code: ''
+  };
 
-  lastName: string = '';
-  firstName: string = '';
-  email: string = '';
-  password: string = '';
-  selectedColor: string = '';
-
-
-  constructor(private colorService: ColorService) {
+  constructor(private colorService: ColorService, private authService: AuthService) {
 
   }
 
   ngOnInit(): void {
     this.getAllColors()
-    console.log('colors', this.selectedColor)
+  }
+
+  onColorClick(color: string) {
+  this.form.color_code = color;
   }
 
   getAllColors() {
@@ -37,7 +43,9 @@ export class SignupComponent implements OnInit{
   }
 
   signup() {
-    console.log('test récupération lastName', this.lastName)
+    this.form.role_id = 3
+    this.authService.signup(this.form).subscribe((user) => {
+    })
   }
 
 }

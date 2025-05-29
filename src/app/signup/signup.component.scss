@@ -47,7 +47,9 @@
                 }
             }
             .color.selected {
-                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 color: white;
                 width: 45px;
                 transform: scale(1.1);
@@ -81,7 +83,7 @@
             }
         }
     }
-    img {
+    .logo {
         width: 42%;
         height: fit-content;
         position: relative;
