@@ -1,0 +1,68 @@
+.login {
+    display: flex;
+    justify-content: space-between;
+    .loginForm {
+        background-color: white;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 650px;
+        margin-left: 2%;
+        justify-content: center;
+        .loginTitle {
+            text-align: center;
+            margin: 0 0 8% 0;
+        }
+        .loginInputs {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 0 10%;
+            input {
+                background-color: #FFE7D8;
+                font-family: "Montserrat", sans-serif;
+                border: none;
+                padding: 12px 0 12px 17px;
+                font-size: 17px;
+                color: black;
+                border-radius: 15px;
+            }
+        }
+        
+        button {
+            margin: 8% 10% 2% 10%;
+            background-color: #FFA28D;
+            border: none;
+            padding: 13px 0;
+            border-radius: 15px;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0px 2px 9px rgba(255, 162, 141, 0.6);
+        }
+
+        .loginRedirect {
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            font-size: 12px;
+            line-height: 7px;
+            margin-bottom: 10px;
+            .loginRedirectLink {
+                color: #FFA28D;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    .logo {
+        width: 42%;
+        height: fit-content;
+        position: relative;
+        top: 130px;
+        right: 95px;
+    }
+}

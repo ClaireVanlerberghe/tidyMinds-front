@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="login">
+    <form class="loginForm">
+        <h1 class="loginTitle">Bonjour !</h1>
+        <div class="loginInputs">
+            <input type="email" placeholder="Email" class="loginEmail" [(ngModel)]="form.email" name="email" required autocomplete="off">
+            <input type="password" placeholder="Mot de passe" class="loginPassword" [(ngModel)]="form.password" name="password" required autocomplete="new-password">
+        </div>
+        
+        <button class="loginButton" (click)="login()">Connexion</button>
+        <div class="loginRedirect">
+            <p class="loginRedirectText">Je n'ai pas encore de compte ?</p>
+            <p class="loginRedirectLink">Inscription</p>
+        </div>
+    </form>
+    <img src="assets/logoTidyMinds.png" alt="Logo de tidyMinds, c'est un nuage avec le nom du site" class="logo"/>
+</div>
