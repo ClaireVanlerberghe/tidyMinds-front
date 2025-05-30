@@ -3,6 +3,7 @@ import { ColorService } from '../services/color.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -24,7 +25,7 @@ export class SignupComponent implements OnInit{
     color_code: ''
   };
 
-  constructor(private colorService: ColorService, private authService: AuthService) {
+  constructor(private colorService: ColorService, private authService: AuthService, private router: Router) {
 
   }
 
@@ -45,6 +46,10 @@ export class SignupComponent implements OnInit{
   signup() {
     this.form.role_id = 3
     this.authService.signup(this.form).subscribe((user) => {
+      if(user) {
+        //Changement de page si inscription ok
+        this.router.navigate(['/'])
+      }
     })
   }
 
