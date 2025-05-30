@@ -114,17 +114,30 @@
   .stats {
     grid-area: stats;
     .statsTitle {
-      font-family: "Pompiere", sans-serif;
-      font-size: 30px;
-      margin: 0;
-    }
-    .statsList {
-      .stat {
-        background-color: white;
-        width: fit-content;
-        padding: 8px 10px;
-        border-radius: 15px;
         font-family: "Pompiere", sans-serif;
+        font-size: 30px;
+        margin: 0 0 18px 0;
+      }
+    .statList {
+      display: flex;
+      gap: 23px;
+      .statTask {
+        .stat {
+          background-color: white;
+          width: fit-content;
+          padding: 8px 10px;
+          border-radius: 15px;
+          font-family: "Pompiere", sans-serif;
+        }
+      }
+      .statChall {
+        .stat {
+          background-color: white;
+          width: fit-content;
+          padding: 8px 10px;
+          border-radius: 15px;
+          font-family: "Pompiere", sans-serif;
+        }
       }
     }
   }
