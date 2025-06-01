@@ -27,7 +27,12 @@ export class LoginComponent {
   }
 
   login() {
-    
+    this.authService.login(this.form).subscribe((user) => {
+      if(user) {
+        //Changement de page si connexion ok
+        this.router.navigate(['/'])
+      }
+    })
   }
 
 }

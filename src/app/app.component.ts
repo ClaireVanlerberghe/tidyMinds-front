@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { CommonModule } from '@angular/common';
+import { TimerDialogComponent } from './modales/timer-dialog/timer-dialog.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, CommonModule],
+  imports: [RouterOutlet, HeaderComponent, CommonModule, TimerDialogComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,10 +1,11 @@
-<p class="hiDashboard">Bonjour, Claire !</p>  <!-- Rendre ça dynamique  -->
+<p class="hiDashboard">Bonjour, Claire ! <button class="timerButton" (click)="openTimer()"><img src="assets/timer.png" /></button></p> <!-- Rendre ça dynamique  -->
+
 
 <div class="dashboard">
     <div class="encouragement">
-        <img src="assets/fleur1.png" alt="fleur de décoration" class="fleur1"/>
-        <img src="assets/fleur2.png" alt="fleur de décoration" class="fleur2"/>
-        Petite phrase d'encouragement  <!-- Rendre ça dynamique  -->
+        <img src="assets/fleur1.png" alt="fleur de décoration" class="fleur1" />
+        <img src="assets/fleur2.png" alt="fleur de décoration" class="fleur2" />
+        Petite phrase d'encouragement <!-- Rendre ça dynamique  -->
     </div>
     <div class="challenges">
         Mes challenges
@@ -14,18 +15,14 @@
                 <p class="oneChallengeTime">5 jours restants</p>
             </div>
             <div class="oneChallengeProgress">
-                <app-progress-bar
-                [title]="'Challenge Yoga'"
-                [current]="5"
-                [max]="15"
-                [daysRemaining]="10">
+                <app-progress-bar [title]="'Challenge Yoga'" [current]="5" [max]="15" [daysRemaining]="10">
                 </app-progress-bar> <!-- Rendre dynamique  -->
             </div>
         </div>
     </div>
     <div class="tasks">Contenu central</div>
     <div class="posts">
-        <img src="assets/fleur3.png" alt="fleur de décoration" class="fleur3"/>
+        <img src="assets/fleur3.png" alt="fleur de décoration" class="fleur3" />
         Manque de dopamine ? Par ici !
     </div>
     <div class="stats">
@@ -43,5 +40,4 @@
             </div>
         </div>
     </div>
-  </div>
-  
+</div>

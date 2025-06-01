@@ -1,0 +1,10 @@
+<div *ngIf="visible" class="timer-modal" cdkDrag>
+  <div class="timer-container">
+    <h2>{{ formattedTime }}</h2>
+    <button (click)="startPause()">
+      {{ running ? 'Pause' : 'Start' }}
+    </button>
+    <button (click)="reset()">Reset</button>
+  </div>
+
+</div>

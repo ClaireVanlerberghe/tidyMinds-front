@@ -1,0 +1,34 @@
+.timer-modal {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 9999;
+  cursor: move;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.header {
+  cursor: move;
+  margin-bottom: 0.5rem;
+}
+
+.content button {
+  margin-top: 1rem;
+}

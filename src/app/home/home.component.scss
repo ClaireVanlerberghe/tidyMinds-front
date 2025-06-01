@@ -141,4 +141,14 @@
       }
     }
   }
-  
+  .timerButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.01);
+    }
+      img {
+        width: 20px;
+      }
+    }
