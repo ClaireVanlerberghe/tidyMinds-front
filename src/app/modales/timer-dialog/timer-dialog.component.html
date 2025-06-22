@@ -1,10 +1,26 @@
+<button *ngIf="!visible" (click)="openTimer()" class="timerButton"><img src="assets/timer.png" class="timerImg" /></button>
 <div *ngIf="visible" class="timer-modal" cdkDrag>
+  <button class="timerCloseButton" (click)="close()"><img src="assets/x.png"></button>
   <div class="timer-container">
-    <h2>{{ formattedTime }}</h2>
-    <button (click)="startPause()">
-      {{ running ? 'Pause' : 'Start' }}
-    </button>
-    <button (click)="reset()">Reset</button>
+    <h2 class="time">{{ formattedTime }}</h2>
+    <div class="defaultButtons" *ngIf="workTime && !inProgress">
+      <button class="breakButton" (click)="gotToBreak()">5</button>
+      <button class="playButton" (click)="startPause()"><img src="assets/play.png"></button>
+    </div>
+    <div class="timeButtons" *ngIf="workTime && inProgress">
+      <button class="breakButton" (click)="gotToBreak()">5</button>
+      <button class="stopButton" (click)="startPause()"><img src="assets/break.png" style="width: 16px;" *ngIf="!break"><img src="assets/playBlack.png" *ngIf="break"></button> <!-- si mis en pause, autre logo -->
+      <button class="restartButton" (click)="reset()"><img src="assets/restart.png"></button>
+    </div>
+    <div class="defaultButtons" *ngIf="breakTime && !inProgress">
+      <button class="breakButton" (click)="gotToBreak()">25</button>
+      <button class="playButton" (click)="startPause()"><img src="assets/play.png"></button>
+    </div>
+    <div class="timeButtons" *ngIf="breakTime && inProgress">
+      <button class="breakButton" (click)="gotToBreak()">25</button>
+      <button class="stopButton"(click)="startPause()"><img src="assets/break.png" style="width: 16px;" *ngIf="!break"><img src="assets/playBlack.png" *ngIf="break"></button> <!-- si mis en pause, autre logo -->
+      <button class="restartButton" (click)="reset()"><img src="assets/restart.png"></button>
+    </div>
   </div>
 
 </div>

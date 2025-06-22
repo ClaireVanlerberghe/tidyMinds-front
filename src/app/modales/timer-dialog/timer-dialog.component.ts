@@ -13,20 +13,36 @@ import { CommonModule } from '@angular/common';
 })
 export class TimerDialogComponent {
   visible = false;
-  time = 60; // en secondes
+  time = 70; // en secondes
   private intervalId: any = null;
   running = false;
 
-   constructor(private timerDialogService: TimerDialogService) {
+  workTime: boolean = true;
+  breakTime: boolean = false;
+  inProgress: boolean = false;
+  break: boolean = false;
+
+  constructor(private timerDialogService: TimerDialogService) {
     this.timerDialogService.visible$.subscribe(v => this.visible = v);
+  }
+
+  openTimer() {
+    this.timerDialogService.open();
   }
 
   startPause() {
     if (this.running) {
+      this.break = true;
       clearInterval(this.intervalId);
     } else {
+      this.break = false
+      this.inProgress = true
       this.intervalId = setInterval(() => {
         this.time--;
+        if (this.time === 0) {
+          this.time = 50
+          //Vérification si breakTime ou si WorkTime
+        }
       }, 1000);
     }
     this.running = !this.running;
@@ -36,6 +52,7 @@ export class TimerDialogComponent {
     clearInterval(this.intervalId);
     this.time = 60;
     this.running = false;
+    this.inProgress = false
   }
 
   get formattedTime(): string {
@@ -44,7 +61,14 @@ export class TimerDialogComponent {
     return `${minutes}:${seconds}`;
   }
 
+  gotToBreak() {
+    this.breakTime = !this.breakTime;
+    this.workTime = !this.workTime;
+  }
+
   close() {
+    this.reset()
+    this.inProgress = false
     this.timerDialogService.close();
   }
 }

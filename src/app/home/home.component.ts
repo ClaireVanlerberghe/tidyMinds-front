@@ -16,12 +16,9 @@ export class HomeComponent {
 
   ref: DynamicDialogRef | undefined;
 
-  constructor(private timerDialogService: TimerDialogService) {
+  constructor() {
 
   }
 
-  openTimer() {
-    this.timerDialogService.open();
-  }
 
 }

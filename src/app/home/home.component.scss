@@ -12,7 +12,7 @@
       "challenges tasks stats";
     gap: 1.5rem;
     padding: 2rem;
-    min-height: 71vh;
+    min-height: 82vh;
   }
   
   .encouragement {
@@ -22,7 +22,6 @@
     padding: 1rem;
     font-family: "Pompiere", sans-serif;
     font-size: 40px;
-    height: 150px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -52,7 +51,6 @@
     cursor: pointer;
     font-family: "Pompiere", sans-serif;
     font-size: 28px;
-    height: 255px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -83,6 +81,19 @@
     background: white;
     border-radius: 15px;
     padding: 1rem;
+    cursor: pointer;
+    font-family: "Pompiere", sans-serif;
+    font-size: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &:hover {
+        transform: scale(1.01);
+    }
+    .tasksTitle {
+      margin-top: 2px;
+    }
   }
   
   .posts {
@@ -93,7 +104,6 @@
     cursor: pointer;
     font-family: "Pompiere", sans-serif;
     font-size: 40px;
-    height: 150px;
     overflow: hidden;
     display: flex;
     align-items: center;

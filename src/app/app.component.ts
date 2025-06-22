@@ -27,4 +27,6 @@ export class AppComponent {
     const noHeaderRoutes = ['/login', '/signup'];
     this.showHeader = !noHeaderRoutes.includes(url);
   }
+
+  
 }
