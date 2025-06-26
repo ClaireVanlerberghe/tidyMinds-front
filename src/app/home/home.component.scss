@@ -1,164 +1,195 @@
 .hiDashboard {
-    font-family: "Pompiere", sans-serif;
-    font-size: 33px;
-    margin: 24px 0 0 40px;
+  font-family: "Pompiere", sans-serif;
+  font-size: 33px;
+  margin: 24px 0 0 40px;
 }
+
 .dashboard {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1.2fr;
-    grid-template-areas:
-      "encouragement tasks posts"
-      "challenges tasks stats"
-      "challenges tasks stats";
-    gap: 1.5rem;
-    padding: 2rem;
-    min-height: 82vh;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
+  grid-template-areas:
+    "encouragement tasks posts"
+    "challenges tasks stats"
+    "challenges tasks stats";
+  gap: 1.5rem;
+  padding: 2rem;
+  min-height: 82vh;
+}
+
+.encouragement {
+  grid-area: encouragement;
+  background: white;
+  border-radius: 15px;
+  padding: 1rem;
+  font-family: "Pompiere", sans-serif;
+  font-size: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+
+  .fleur1 {
+    width: 22%;
+    position: absolute;
+    top: -23px;
+    right: -23px
   }
-  
-  .encouragement {
-    grid-area: encouragement;
-    background: white;
-    border-radius: 15px;
-    padding: 1rem;
-    font-family: "Pompiere", sans-serif;
-    font-size: 40px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    
-    .fleur1 {
-        width: 22%;
-        position: absolute;
-        top: -23px;
-        right: -23px
-    }
-    .fleur2 {
-        width: 20%;
-        position: absolute;
-        bottom: -23px;
-        left: -7px;
-    }
+
+  .fleur2 {
+    width: 20%;
+    position: absolute;
+    bottom: -23px;
+    left: -7px;
   }
-  
-  .challenges {
-    grid-area: challenges;
-    background: white;
-    border-radius: 15px;
-    padding: 1rem;
-    cursor: pointer;
-    font-family: "Pompiere", sans-serif;
-    font-size: 28px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    &:hover {
-        transform: scale(1.01);
-    }
-    .oneChallenge {
-      width: 100%;
-      .oneChallengeDescription {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-        .oneChallengeName {
-          font-size: 20px;
-        }
-        .oneChallengeTime {
-          font-size: 12px;
-          font-family: "Montserrat", sans-serif;
-        }
-      }
-    }
+}
+
+.challenges {
+  grid-area: challenges;
+  background: white;
+  border-radius: 15px;
+  padding: 1rem;
+  cursor: pointer;
+  font-family: "Pompiere", sans-serif;
+  font-size: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.01);
   }
-  
-  .tasks {
-    grid-area: tasks;
-    background: white;
-    border-radius: 15px;
-    padding: 1rem;
-    cursor: pointer;
-    font-family: "Pompiere", sans-serif;
-    font-size: 28px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    &:hover {
-        transform: scale(1.01);
-    }
-    .tasksTitle {
-      margin-top: 2px;
-    }
-  }
-  
-  .posts {
-    grid-area: posts;
-    background: white;
-    border-radius: 15px;
-    padding: 1rem;
-    cursor: pointer;
-    font-family: "Pompiere", sans-serif;
-    font-size: 40px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    &:hover {
-        transform: scale(1.01);
-    }
-    .fleur3 {
-        position: absolute;
-        top: -15px;
-        left: -22px;
-        width: 17%;
-    }
-  }
-  
-  .stats {
-    grid-area: stats;
-    .statsTitle {
-        font-family: "Pompiere", sans-serif;
-        font-size: 30px;
-        margin: 0 0 18px 0;
-      }
-    .statList {
+
+  .oneChallenge {
+    width: 100%;
+
+    .oneChallengeDescription {
       display: flex;
-      gap: 23px;
-      .statTask {
-        .stat {
-          background-color: white;
-          width: fit-content;
-          padding: 8px 10px;
-          border-radius: 15px;
-          font-family: "Pompiere", sans-serif;
-        }
+      align-items: center;
+      justify-content: space-between;
+
+      .oneChallengeName {
+        font-size: 20px;
       }
-      .statChall {
-        .stat {
-          background-color: white;
-          width: fit-content;
-          padding: 8px 10px;
-          border-radius: 15px;
-          font-family: "Pompiere", sans-serif;
-        }
+
+      .oneChallengeTime {
+        font-size: 12px;
+        font-family: "Montserrat", sans-serif;
       }
     }
   }
-  .timerButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    &:hover {
-        transform: scale(1.01);
-    }
-      img {
-        width: 20px;
+}
+
+.tasks {
+  grid-area: tasks;
+  padding: 1rem;
+  font-family: "Pompiere", sans-serif;
+  font-size: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .tasksTitle {
+    margin-top: 2px;
+  }
+
+  .allTasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .oneTask {
+      font-family: "Montserrat", sans-serif;
+      font-size: 15px;
+      background: white;
+      border-radius: 15px;
+      display: flex;
+      gap: 20px;
+      padding: 12px;
+      cursor: pointer;
+
+      label {
+        cursor: pointer;
       }
     }
+  }
+}
+
+.posts {
+  grid-area: posts;
+  background: white;
+  border-radius: 15px;
+  padding: 1rem;
+  cursor: pointer;
+  font-family: "Pompiere", sans-serif;
+  font-size: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  .fleur3 {
+    position: absolute;
+    top: -15px;
+    left: -22px;
+    width: 17%;
+  }
+}
+
+.stats {
+  grid-area: stats;
+
+  .statsTitle {
+    font-family: "Pompiere", sans-serif;
+    font-size: 30px;
+    margin: 0 0 18px 0;
+  }
+
+  .statList {
+    display: flex;
+    gap: 23px;
+
+    .statTask {
+      .stat {
+        background-color: white;
+        width: fit-content;
+        padding: 8px 10px;
+        border-radius: 15px;
+        font-family: "Pompiere", sans-serif;
+      }
+    }
+
+    .statChall {
+      .stat {
+        background-color: white;
+        width: fit-content;
+        padding: 8px 10px;
+        border-radius: 15px;
+        font-family: "Pompiere", sans-serif;
+      }
+    }
+  }
+}
+
+.timerButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  img {
+    width: 20px;
+  }
+}
